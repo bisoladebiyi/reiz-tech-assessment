@@ -4,6 +4,9 @@
 - SCSS
 - Typescript
 
+## Live site:
+[Live site](https://abisoladebiyi-reiz-tech-assessment.netlify.app/)
+
 ## Screenshots
 ![Dahboard](/src/assets/images/dashboard.png)
 ![Mobile view](/src/assets/images/mobile_view.png)
