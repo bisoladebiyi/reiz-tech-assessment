@@ -1,0 +1,138 @@
+@import "../../styles/mixins/media";
+
+.CountriesList {
+  background: #fff;
+  box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
+  border-radius: 20px;
+  padding: 30px 38px;
+  margin-top: 40px;
+
+  @include mobile {
+    padding: 22px 25px;
+  }
+
+  &-Header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include desktop {
+      display: block;
+    }
+  }
+
+  &-Headings {
+    h2 {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 33px;
+      letter-spacing: -0.01em;
+      color: #000000;
+
+      @include mobile {
+        font-size: 18px;
+      }
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: -0.01em;
+      color: #16c098;
+      margin-top: 5px;
+
+      @include mobile {
+        font-size: 12px;
+        margin-top: 0;
+      }
+    }
+  }
+
+  &-DataTitles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    padding: 20px 0;
+    color: #b5b7c0;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 14px;
+    margin-top: 40px;
+
+    @include mobile {
+      font-size: 11px;
+      margin-top: 20px;
+      gap: 20px;
+    }
+  }
+
+  .NoResultsText {
+    text-align: center;
+    padding: 50px 0;
+    color: #16c098;
+    font-size: 14px;
+  }
+
+  &-Item {
+    padding: 20px 0;
+    border-bottom: 1px solid #eeeeee;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+
+    &Name,
+    &Region,
+    &Area {
+      font-weight: 400;
+      font-size: 14px;
+      letter-spacing: -0.01em;
+      color: #292d32;
+
+      @include mobile {
+        font-size: 11px;
+      }
+    }
+
+    &Area {
+      color: #16c098;
+    }
+  }
+
+  &-FiltersApplied {
+    display: flex;
+    width: 50%;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 20px;
+
+    div {
+      display: flex;
+      font-size: 10px;
+      color: #fff;
+      background: #16c098a5;
+      padding: 5px;
+      border-radius: 10px;
+      position: relative;
+
+      button {
+        all: unset;
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background-color: #16c098ba;
+        border-radius: 50%;
+        top: -7px;
+        left: -5px;
+        display: grid;
+        place-items: center;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #16c098d7;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

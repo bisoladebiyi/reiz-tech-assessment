@@ -1,0 +1,78 @@
+@import "../../styles/mixins/media";
+
+.MobileFilters {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: none;
+  background-color: #fff;
+  border-radius: 20px;
+  width: 80%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  box-shadow: 0 0 0 50vmax rgba(0, 0, 0, 0.5);
+
+  @include mobile {
+    display: block;
+  }
+
+  .Filters {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    place-items: start;
+    margin-top: 0;
+
+    &-SortAndFilters {
+      display: flex;
+      background: none;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+
+      label {
+        margin-bottom: 5px;
+        font-size: 12px;
+      }
+
+      select {
+        font-size: 12px;
+        width: 100%;
+        max-width: unset;
+        background: #f9fbff;
+        padding: 5px 10px;
+        border-radius: 3px;
+      }
+    }
+
+    &-SearchWrapper {
+      display: none;
+    }
+
+    .MobileFilterBtn {
+      display: none;
+    }
+  }
+
+  .CloseBtn {
+    all: unset;
+    color: #fff;
+    background: #16c098d5;
+    font-size: 11px;
+    display: grid;
+    place-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    right: 0;
+    font-weight: 700;
+    transition: background 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      background: #16c098fe;
+    }
+  }
+}

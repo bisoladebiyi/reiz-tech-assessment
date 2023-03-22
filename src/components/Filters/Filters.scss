@@ -1,0 +1,128 @@
+@import "../../styles/mixins/media";
+
+.Filters {
+  display: flex;
+  gap: 16px;
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 20px;
+  }
+
+  @include mobile {
+    grid-template-columns: 70% 30%;
+    gap: 0;
+  }
+
+  &-Search {
+    &Wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 15px;
+        left: 10px;
+      }
+    }
+
+    width: 216px;
+    height: 38px;
+    background: #f9fbff;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 30px;
+
+    &::placeholder {
+      color: #b5b7c0;
+      font-size: 12px;
+      font-weight: thin;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0px 2px #16c098;
+    }
+
+    @include desktop {
+      width: 100%;
+    }
+
+    @include mobile {
+      height: auto;
+      padding: 10px 30px;
+    }
+  }
+
+  &-SortAndFilters {
+    background: #f9fbff;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+
+    @include desktop {
+      justify-content: space-between;
+    }
+
+    @include mobile {
+      display: none;
+    }
+
+    label {
+      color: #b5b7c0;
+      font-size: 12px;
+      font-weight: thin;
+
+      @include mobile {
+        font-size: 10px;
+        display: block;
+      }
+    }
+
+    select {
+      border: none;
+      margin-left: 10px;
+      outline: none;
+      background: none;
+      cursor: pointer;
+      max-width: 105px;
+
+      @include desktop {
+        max-width: auto;
+      }
+
+      @include mobile {
+        margin-left: 0;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .MobileFilterBtn {
+    all: unset;
+    display: none;
+    font-size: 10px;
+    align-items: center;
+    justify-content: center;
+    color: #16c098;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: 1px solid #16c09882;
+    justify-self: flex-end;
+    padding: 5px;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: #fff;
+      background: #16c09882;
+    }
+
+    @include mobile {
+      display: flex;
+    }
+  }
+}
