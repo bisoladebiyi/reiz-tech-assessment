@@ -90,6 +90,7 @@
       background: none;
       cursor: pointer;
       max-width: 105px;
+      color: #000;
 
       @include desktop {
         max-width: auto;
